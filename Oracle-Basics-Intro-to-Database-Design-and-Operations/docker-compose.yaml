@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  db:
+    image: oracle_1930
+    container_name: oracle19c
+    ports:
+      - 1521:1521
+    volumes:
+      - path:/opt/oracle/oradata
+    environment:
+      - ORACLE_PWD=password
